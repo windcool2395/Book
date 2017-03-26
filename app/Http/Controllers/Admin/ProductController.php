@@ -76,7 +76,7 @@ class ProductController extends Controller
             $row->size = $request->size;
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $path = public_path('uploads/publishingcompany/');
+            $path = public_path('uploads/product/');
             $file->move($path,$filename);
             $row->thumbnail =  $filename;
             $row->save();
@@ -142,7 +142,7 @@ class ProductController extends Controller
             $row->size = $request->size;
             $file = $request->file('image');
             $filename = $file->getClientOriginalName();
-            $path = public_path('uploads/publishingcompany/');
+            $path = public_path('uploads/product/');
             $file->move($path,$filename);
             $row->thumbnail = $filename;
             $row->save();
